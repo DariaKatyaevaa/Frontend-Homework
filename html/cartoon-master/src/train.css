@@ -1,0 +1,60 @@
+.train {
+  animation: train 10s linear infinite;
+}
+
+@keyframes train {
+  0% {
+    transform: translateX(450px);
+  }
+
+  100% {
+    transform: translateX(-1050px);
+  }
+}
+
+.wheel {
+  animation: wheel 2s linear infinite;
+}
+
+@keyframes wheel {
+  to {
+    transform: rotate(-1turn);
+  }
+}
+
+.wheel-joint {
+  animation: wheel-joint 2s linear infinite;
+}
+
+@keyframes wheel-joint {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.smoke {
+  width: 1.4rem;
+  height: 0.8rem;
+
+  animation: smoke 2s ease-out infinite;
+}
+
+.smoke-2 {
+  animation-delay: 0.3s;
+}
+
+.smoke-3 {
+  animation-delay: 0.6s;
+}
+
+.smoke-4 {
+  animation-delay: 0.9s;
+}
+
+@keyframes smoke {
+  to {
+    transform: translate(70px, -100px) scale(2);
+
+    opacity: 0;
+  }
+}

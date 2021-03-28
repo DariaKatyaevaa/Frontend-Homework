@@ -1,0 +1,60 @@
+.meteor {
+  position: absolute;
+  top: 50px;
+  left: 280px;
+  width: 300px;
+  height: 1px;
+  transform: rotate(-45deg);
+  background-image: linear-gradient(left, white, rgba(255, 255, 255, 0));
+}
+
+.meteor:before {
+  content: ' ';
+  position: absolute;
+  width: 4px;
+  height: 5px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 0 14px 4px white;
+  margin-top: -2px;
+}
+
+@keyframes meteor {
+  0% {
+    margin-top: -300px;
+    margin-right: -300px;
+    opacity: 1
+  }
+
+  8% {
+    opacity: 0
+  }
+
+  10% {
+    margin-top: 300px;
+    margin-left: -600px;
+    opacity: 0
+  }
+
+  100% {
+    opacity: 0
+  }
+}
+
+.meteor:nth-child(1) {
+  top: 100px;
+  left: 480px;
+  animation: meteor 10s linear infinite;
+}
+
+.meteor:nth-child(2) {
+  top: 200px;
+  left: 280px;
+  animation: meteor 10s linear infinite;
+}
+
+.meteor:nth-child(3) {
+  top: 250px;
+  left: 790px;
+  animation: meteor 9s linear infinite;
+}

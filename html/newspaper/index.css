@@ -1,0 +1,136 @@
+@font-face {
+    font-family: NewYorkTimes;
+    src: url(./fonts/NewYorkTimes.ttf);
+}
+
+.page {
+    width: 90%;
+    margin: auto;
+    border: 1px solid darkgray;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    padding: 10px;
+}
+
+.header {
+    text-align: center;
+}
+
+.paper-name {
+    font-size: 80px;
+    margin: 10px;
+    font-family: NewYorkTimes;
+}
+
+.date {
+    width: 100%;
+    border-top: 1px solid black;
+    border-bottom: 2px solid black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.newspaper {
+    display: grid;
+    grid-gap: 15px;
+    grid-template:
+        '. left center right by'
+        /10px 2fr 1fr 2fr 10px;
+    padding: 10px;
+    text-align: justify;
+}
+
+.title {
+    text-align: left;
+}
+
+.left {
+    grid-area: left;
+    column-count: 2;
+    column-rule: 1px solid black;
+}
+
+.left .title {
+    border-top: 5px double black;
+    border-bottom: 5px double black;
+    font-size: 40px;
+    padding: 20px;
+    margin: 0;
+}
+
+.right {
+    grid-area: right;
+    column-rule: 1px solid black;
+    column-count: 2;
+}
+
+.right .title {
+    font-size: 30px;
+    font-family: 'Suez One', serif;
+}
+
+.center {
+    grid-area: center;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    padding: 0px 10px;
+}
+
+.center .title {
+    border-bottom: 3px solid black;
+    font-family: 'Inknut Antiqua', serif;
+    line-height: 25px;
+    padding-bottom: 5px;
+}
+
+.image {
+    column-span: all;
+    padding: 20px 0;
+}
+
+.text,
+.autor {
+    font-family: 'Times New Roman', Times, serif;
+    text-indent: 15px;
+
+}
+
+.autor {
+    font-style: italic;
+    font-weight: bold;
+    text-align: left;
+}
+
+.quote-text {
+    margin: 15px 0;
+    text-align: center;
+    font-family: 'Marck Script', cursive;
+    font-size: 30px;
+}
+
+.info {
+    grid-area: by;
+    font-size: 13px;
+    text-align: center;
+    /**writing-mode: vertical-rl;**/
+    word-wrap: break-word;
+}
+
+.theme-black:checked~.page {
+    background: black;
+    color: white;
+}
+
+.size-big:checked~.page .text {
+    font-size: 24px;
+}
+
+.big-quote {
+    font-family: 'Satisfy', cursive;
+    font-size: 18px;
+    margin: 5px;
+}
+
+.first::first-letter {
+    font-weight: bolder;
+    font-size: 30px;
+}

@@ -1,0 +1,404 @@
+html{
+  font: 1em sans-serif;
+}
+
+.header
+{
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  position: fixed;
+}
+
+.site_name{
+  font-family: 'PT SansNarrow', sans-serif;
+  font-size: 32px;
+  text-align: center;
+  font-weight: normal;
+  margin-bottom: 5px;
+  margin-top: 0%;
+  padding: 10px;
+  border-bottom: 1px solid lavender;
+  background-color: white;
+}
+
+.first_letter{
+  color: red;
+}
+
+.footer{
+  left: 0;
+  bottom: 0;
+  margin-bottom: 0;
+  border-top: 1px solid lavender;
+  width: 100%;
+  font: 14px Arial, Helvetica, sans-serif;
+  background-color: white;
+  position: fixed;
+  z-index: 1;
+
+}
+
+.footer_elem{
+  margin: 10px 15px 15px;
+}
+
+.footer_left{
+  float: left;
+}
+
+.footer_right{
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.footer_elem > a{
+  color: #4c4cd8;
+}
+
+.footer_elem > .email::before
+{
+    content: ' ';
+    display: inline-block;
+    background-image: url(images/email.png);
+    background-size: cover;
+    width: 23px;
+    height: 17px;
+}
+
+.carousel_elems{
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 90px;
+    width: 700%;
+    height: 65%;
+    transition: left 1s ease-in-out;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 100%;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+
+.switcher{
+    display: none;
+}
+
+.pointers{
+    position: fixed;
+    top: 80%;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.pointers > li{
+    display: inline-block;
+}
+
+.pointer{
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: lightgrey;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.carousel_1:checked ~ .pointers li:nth-child(1) > .pointer,
+.carousel_2:checked ~ .pointers li:nth-child(2) > .pointer,
+.carousel_3:checked ~ .pointers li:nth-child(3) > .pointer,
+.carousel_4:checked ~ .pointers li:nth-child(4) > .pointer,
+.carousel_5:checked ~ .pointers li:nth-child(5) > .pointer,
+.carousel_6:checked ~ .pointers li:nth-child(6) > .pointer,
+.carousel_7:checked ~ .pointers li:nth-child(7) > .pointer,
+.carousel_8:checked ~ .pointers li:nth-child(8) > .pointer,
+.carousel_9:checked ~ .pointers li:nth-child(9) > .pointer,
+.carousel_10:checked ~ .pointers li:nth-child(10) > .pointer{
+    background-color: gray;
+}
+
+.carousel_elem{
+    display: inline-block;
+    width: 8%;
+    margin: 10px;
+    background-size: cover;
+    background-position: center center;
+    opacity: .7;
+    position: relative;
+    height: 80%;
+    bottom: 10%;
+}
+
+.carousel_elem label{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 70;
+}
+
+.elem_1{
+    background-image: url(cats/кот1.jpg);
+}
+
+.elem_2{
+    background-image: url(cats/кот2.jpg);
+}
+
+.elem_3{
+    background-image: url(cats/кот3.jpg);
+}
+
+.elem_4{
+    background-image: url(cats/кот4.jpg);
+}
+
+.elem_5{
+    background-image: url(cats/кот5.jpg);
+}
+
+.elem_6{
+    background-image: url(cats/кот6.jpg);
+}
+
+.elem_7{
+    background-image: url(cats/кот7.jpg);
+}
+
+.elem_8{
+    background-image: url(cats/кот8.jpg);
+}
+
+.elem_9{
+    background-image: url(cats/кот9.jpg);
+}
+
+.elem_10{
+    background-image: url(cats/кот10.jpg);
+}
+
+.carousel_1:checked ~ .carousel_elems{
+    left: 23%;
+}
+
+.carousel_2:checked ~ .carousel_elems{
+    left: -35%;
+}
+
+.carousel_3:checked ~ .carousel_elems{
+    left: -95%;
+}
+
+.carousel_4:checked ~ .carousel_elems{
+    left: -152%;
+}
+
+.carousel_5:checked ~ .carousel_elems{
+    left: -210%;
+}
+
+.carousel_6:checked ~ .carousel_elems{
+    left: -265%;
+}
+
+.carousel_7:checked ~ .carousel_elems{
+    left: -323%;
+}
+
+.carousel_8:checked ~ .carousel_elems{
+    left: -380%;
+}
+
+.carousel_9:checked ~ .carousel_elems{
+    left: -438%;
+}
+
+.carousel_10:checked ~ .carousel_elems{
+    left: -496%;
+}
+
+.carousel_1:checked ~ .carousel_elems > .elem_1,
+.carousel_2:checked ~ .carousel_elems > .elem_2,
+.carousel_3:checked ~ .carousel_elems > .elem_3,
+.carousel_4:checked ~ .carousel_elems > .elem_4,
+.carousel_5:checked ~ .carousel_elems > .elem_5,
+.carousel_6:checked ~ .carousel_elems > .elem_6,
+.carousel_7:checked ~ .carousel_elems > .elem_7,
+.carousel_8:checked ~ .carousel_elems > .elem_8,
+.carousel_9:checked ~ .carousel_elems > .elem_9,
+.carousel_10:checked ~ .carousel_elems > .elem_10{
+    height: 100%;
+    top: 0;
+    opacity: 1;
+}
+
+.carousel_name{
+    visibility: hidden;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 0;
+    cursor: pointer;
+}
+
+.name{
+  font-family: 'PT SansNarrow', sans-serif;
+  font-size: 32px;
+  text-align: center;
+  font-weight: normal;
+  color:white;
+}
+
+.modal_label{
+    display: none;
+}
+
+.carousel_1:checked ~ .carousel_elems .elem_1:hover .carousel_name,
+.carousel_2:checked ~ .carousel_elems .elem_2:hover .carousel_name,
+.carousel_3:checked ~ .carousel_elems .elem_3:hover .carousel_name,
+.carousel_4:checked ~ .carousel_elems .elem_4:hover .carousel_name,
+.carousel_5:checked ~ .carousel_elems .elem_5:hover .carousel_name,
+.carousel_6:checked ~ .carousel_elems .elem_6:hover .carousel_name,
+.carousel_7:checked ~ .carousel_elems .elem_7:hover .carousel_name,
+.carousel_8:checked ~ .carousel_elems .elem_8:hover .carousel_name,
+.carousel_9:checked ~ .carousel_elems .elem_9:hover .carousel_name,
+.carousel_10:checked ~ .carousel_elems .elem_10:hover .carousel_name{
+    visibility: visible;
+}
+
+.carousel_1:checked ~ .carousel_elems .elem_1:hover .modal_label,
+.carousel_2:checked ~ .carousel_elems .elem_2:hover .modal_label,
+.carousel_3:checked ~ .carousel_elems .elem_3:hover .modal_label,
+.carousel_4:checked ~ .carousel_elems .elem_4:hover .modal_label,
+.carousel_5:checked ~ .carousel_elems .elem_5:hover .modal_label,
+.carousel_6:checked ~ .carousel_elems .elem_6:hover .modal_label,
+.carousel_7:checked ~ .carousel_elems .elem_7:hover .modal_label,
+.carousel_8:checked ~ .carousel_elems .elem_8:hover .modal_label,
+.carousel_9:checked ~ .carousel_elems .elem_9:hover .modal_label,
+.carousel_10:checked ~ .carousel_elems .elem_10:hover .modal_label{
+    display: block;
+}
+
+.cats_info{
+    display: block;
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+}
+
+.cats_info::before{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.9);
+    z-index: -1;
+    visibility: hidden;
+
+}
+
+.descr{
+    position: relative;
+    display: none;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.text_descr{
+  margin-left: 400px;
+  padding-top: 150px;
+}
+
+.img_cat{
+    height: 450px;
+    width: auto;
+    float: left;
+    margin-left: 300px;
+    padding-right: 40px;
+    padding-top: 50px;
+   }
+
+.close_label{
+    position: relative;
+    top: 0;
+    margin: 0 20px;
+    margin-left: 400px;
+    cursor: pointer;
+    font-size: 40px;
+}
+
+.checkbox_1:checked ~ .wrapper .carousel_elems > .elem_1:hover .carousel_name,
+.checkbox_2:checked ~ .wrapper .carousel_elems > .elem_2:hover .carousel_name,
+.checkbox_3:checked ~ .wrapper .carousel_elems > .elem_3:hover .carousel_name,
+.checkbox_4:checked ~ .wrapper .carousel_elems > .elem_4:hover .carousel_name,
+.checkbox_5:checked ~ .wrapper .carousel_elems > .elem_5:hover .carousel_name,
+.checkbox_6:checked ~ .wrapper .carousel_elems > .elem_6:hover .carousel_name,
+.checkbox_7:checked ~ .wrapper .carousel_elems > .elem_7:hover .carousel_name,
+.checkbox_8:checked ~ .wrapper .carousel_elems > .elem_8:hover .carousel_name,
+.checkbox_9:checked ~ .wrapper .carousel_elems > .elem_9:hover .carousel_name,
+.checkbox_10:checked ~ .wrapper .carousel_elems > .elem_10:hover .carousel_name
+{
+    visibility: hidden;
+    z-index: -100;
+}
+
+.checkbox_1:checked ~ .cats_info::before,
+.checkbox_2:checked ~ .cats_info::before,
+.checkbox_3:checked ~ .cats_info::before,
+.checkbox_4:checked ~ .cats_info::before,
+.checkbox_5:checked ~ .cats_info::before,
+.checkbox_6:checked ~ .cats_info::before,
+.checkbox_7:checked ~ .cats_info::before,
+.checkbox_8:checked ~ .cats_info::before,
+.checkbox_9:checked ~ .cats_info::before,
+.checkbox_10:checked ~ .cats_info::before{
+    visibility: visible;
+    z-index: 0;
+}
+
+.checkbox_1:checked ~ .cats_info,
+.checkbox_2:checked ~ .cats_info,
+.checkbox_3:checked ~ .cats_info,
+.checkbox_4:checked ~ .cats_info,
+.checkbox_5:checked ~ .cats_info,
+.checkbox_6:checked ~ .cats_info,
+.checkbox_7:checked ~ .cats_info,
+.checkbox_8:checked ~ .cats_info,
+.checkbox_9:checked ~ .cats_info,
+.checkbox_10:checked ~ .cats_info{
+    z-index: 11;
+    display: block;
+}
+
+.checkbox_1:checked ~ .cats_info > .descr:nth-child(1),
+.checkbox_2:checked ~ .cats_info > .descr:nth-child(2),
+.checkbox_3:checked ~ .cats_info > .descr:nth-child(3),
+.checkbox_4:checked ~ .cats_info > .descr:nth-child(4),
+.checkbox_5:checked ~ .cats_info > .descr:nth-child(5),
+.checkbox_6:checked ~ .cats_info > .descr:nth-child(6),
+.checkbox_7:checked ~ .cats_info > .descr:nth-child(7),
+.checkbox_8:checked ~ .cats_info > .descr:nth-child(8),
+.checkbox_9:checked ~ .cats_info > .descr:nth-child(9),
+.checkbox_10:checked ~ .cats_info > .descr:nth-child(10){
+    display: inline;
+}
+
+

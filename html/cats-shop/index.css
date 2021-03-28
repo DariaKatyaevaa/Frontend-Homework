@@ -1,0 +1,328 @@
+html,
+body{
+    margin: 0;
+    font: 1em sans-serif;
+}
+
+/*header*/
+
+.header{
+  width: 100%;
+  display: flex;
+  background-color: white;
+  border-bottom: 1px solid lavender;
+}
+
+.site_name{
+  font-family: 'PT SansNarrow', sans-serif;
+  font-size: 32px;
+  font-weight: normal;
+  margin: auto;
+  padding: 10px 0;
+
+}
+
+.site_name:hover{
+  color: rgb(150, 150, 236);
+}
+
+.first_letter{
+  color: rgb(150, 150, 236);
+}
+
+
+/*footer*/
+
+.footer{
+  border-top: 1px solid lavender;
+  width: 100%;
+  font: 14px Arial, Helvetica, sans-serif;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.dot{
+  display: none;
+}
+
+.footer_elem{
+  margin: 10px 20px 15px;
+}
+
+.footer_elem > a{
+  color: #4c4cd8;
+  text-decoration: none;
+}
+
+.email::before{
+  content: ' ';
+  display: inline-block;
+  background-image: url(images/email.png);
+  background-size: cover;
+  width: 22px;
+  height: 16px;
+
+}
+
+.emails{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+
+}
+
+
+/*main*/
+
+.descr{
+  margin: 10px;
+  margin-bottom: 20px;
+  font-size: small;
+}
+
+.short_descr{
+  color: gray;
+}
+
+.full_descr{
+  display: none;
+  font-size: small;
+  color: gray;
+  padding-left: 15px;
+}
+
+.filter{
+  display: none;
+}
+
+.filter-input
+{
+    display: none;
+}
+
+.descr :hover, .full_descr :hover{
+  color:  rgb(150, 150, 236);
+  text-shadow: 1px 1px 3px lavender;
+}
+
+.name {
+  font-size: large;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.name a{
+  color: rgb(150, 150, 236);
+  text-decoration: none;
+}
+
+.cats_wrapper{
+  margin: 20px 0;
+}
+
+.img_cat{
+  display: block;
+  width: 100%;
+}
+
+.img_cat:hover{
+  opacity: 50%;
+}
+
+.cats_info {
+  border: 1px solid lavender;
+  margin: 20px 5%;
+}
+
+.cats_info:hover{
+  box-shadow: 0 3px 5px lavender;
+}
+
+
+@media screen and (min-width: 730px){
+
+  .header{
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .cats_info{
+    margin: 10px;
+  }
+
+  .cats_wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 80px;
+    margin-bottom: 120px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .img_cat{
+    max-width: 100%;
+  }
+
+  .img_box {
+    height: 230px;
+    overflow: hidden;
+  }
+
+}
+
+
+@media screen and (min-width: 1200px){
+
+  html,
+  body{
+      background-color: initial;
+  }
+
+  .market_wrapper{
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .cats_wrapper{
+    flex-basis: 80%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .filter{
+    margin: 20px 0;
+    display: block;
+    flex-basis: 20%;
+    font: 15px Arial, sans-serif;
+    color: #565656;
+  }
+
+  .cats_info{
+    display: grid;
+    grid-template-rows: 250px 80px;
+    grid-template-columns: 300px auto;
+    grid-column-gap: 5px;
+    opacity: 0;
+  }
+
+  .descr{
+    padding-left: 20px;
+  }
+
+  .full_descr{
+    display: block;
+    border-top: 1px solid lavender;
+    grid-column: span 2;
+  }
+
+  .header{
+      position: static;
+  }
+
+  .footer{
+      position: static;
+  }
+
+  .dot{
+    display: block;
+  }
+
+  .emails{
+    width: 400px;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .emails::before{
+    content: '';
+    display: inline-block;
+    background-image: url(images/email.png);
+    background-size: cover;
+    width: 18px;
+    height: 13px;
+  }
+
+  .email::before{
+    display: none;
+  }
+
+  .img_cat{
+    margin: 5%;
+    height: 300px;
+
+  }
+
+  .img_box{
+    overflow: hidden;
+  }
+
+
+  .filter_name{
+    margin-left: 2%;
+    font-size: 20px;
+    text-align: left;
+    font-weight: normal;
+  }
+
+  .breed_filter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .range{
+    position: absolute;
+  }
+
+  .range .right{
+    position: relative;
+    float: right;
+    margin-right: -5px;
+ }
+
+  .breed{
+    display: block;
+    margin: 2%;
+    border: 2px solid lavender;
+    border-radius: 5px;
+    width: 80%;
+    padding: 15px;
+  }
+
+  .rb-no:checked ~ .market_wrapper .cats_wrapper > .cats_info,
+  .rb-alley:checked ~ .market_wrapper .cats_wrapper > .alley,
+  .rb-maine-coon:checked ~ .market_wrapper .cats_wrapper > .maine-coon,
+  .rb-british:checked ~ .market_wrapper .cats_wrapper > .british,
+  .rb-bengal:checked ~ .market_wrapper .cats_wrapper > .bengal{
+    order: -1;
+    opacity: 1;
+  }
+
+  .rb-no:checked ~ .market_wrapper .breed_filter > .lb-no,
+  .rb-alley:checked ~ .market_wrapper .breed_filter > .lb-alley,
+  .rb-maine-coon:checked ~ .market_wrapper .breed_filter > .lb-maine-coon,
+  .rb-british:checked ~ .market_wrapper .breed_filter > .lb-british,
+  .rb-bengal:checked ~ .market_wrapper .breed_filter > .lb-bengal{
+    background-color: lavender;
+  }
+
+
+}
+
+
+

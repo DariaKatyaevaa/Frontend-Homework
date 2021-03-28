@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mурмаркет</title>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+  <body>
+
+      <header class="header">
+        <h1 class="site_name"><span class="first_letter">Мур</span>маркет</h1>
+      </header>
+
+    <input class="filter-input rb-no" type="radio" name="filter" id="nothing" checked>
+    <input class="filter-input rb-alley" type="radio" name="filter" id="alley">
+    <input class="filter-input rb-maine-coon" type="radio" name="filter" id="maine-coon">
+    <input class="filter-input rb-british" type="radio" name="filter" id="british">
+    <input class="filter-input rb-bengal" type="radio" name="filter" id="bengal">
+
+      <div class="market_wrapper">
+
+        <aside class="filter">
+          <h3 class="filter_name">Возраст</h3>
+          <div class="age_filter">
+            <input class="range left" type="range" id="left" name="left" min="0" max="10" value="0">
+            <input class="range right" type="range" id="right" name="right" min="0" max="10" value="6">
+            <p><br><br>от 0 до 6 лет</p>
+          </div>
+          <h3 class="filter_name">Порода</h3>
+          <div class="breed_filter">
+            <label class="breed lb-no" for="nothing">Любая</label>
+            <label class="breed lb-alley" for="alley">Дворовая</label>
+            <label class="breed lb-bengal" for="bengal">Бенгальская</label>
+            <label class="breed lb-british" for="british">Британская</label>
+            <label class="breed lb-maine-coon" for="maine-coon">Мэйн-Кун</label>
+          </div>
+        </aside>
+
+
+        <div class="cats_wrapper">
+
+          <article class="cats_info british">
+            <div class="img_box">
+              <a href="http://www.omfgdogs.com/"><img src="cats/кот1.jpg" alt="cat1" class="img_cat"></a>
+            </div>
+            <div class="descr">
+              <p class="name"><a href="http://www.omfgdogs.com/">Тыковка</a></p>
+              <section class="short_descr">
+                <p>
+                  Возраст: 2 года<br>
+                  Порода: золотой британский<br>
+                  Болезни: нет
+                </p>
+                <p class="status">
+                  Статус: ищет хозяина
+                </p>
+              </section>
+            </div>
+            <section class="full_descr">
+              <p>Любит спать и играть.<br> Возраст 2 года.<br>Потеряла хозяина, когда гналась за птицей:(</p>
+            </section>
+          </article>
+
+          <article class="cats_info british">
+            <div class="img_box">
+              <a href="http://www.omfgdogs.com/"><img src="cats/кот2.jpg" alt="cat2" class="img_cat"></a>
+            </div>
+            <div class="descr">
+              <p class="name"><a href="http://www.omfgdogs.com/">Пусень</a></p>
+            <section class="short_descr">
+              <p>
+                Возраст: 4 года<br>
+                Порода: британец<br>
+                Болезни: нет
+              </p>
+              <p class="status">
+                Статус: нашел хозяина
+              </p>
+            </section>
+            </div>
+            <section class="full_descr">
+              <p>Мешает тебе смотреть пары на дистанте.<br>Возраст 4 года.</p>
+            </section>
+          </article>
+
+          <article class="cats_info alley">
+            <div class="img_box">
+              <a href="http://www.omfgdogs.com/"><img src="cats/кот3.jpg" alt="cat3" class="img_cat"></a>
+            </div>
+            <div class="descr">
+              <p class="name"><a href="http://www.omfgdogs.com/">Лунатик</a></p>
+              <section class="short_descr">
+                <p>Возраст: 4 года<br>Порода: рыжик<br>Болезни: нет</p>
+                <p class="status">Статус: ищет новую планету</p>
+              </section>
+            </div>
+            <section class="full_descr">
+              <p>Общительный и ласковый.<br>Возраст 4 года.<br>Любит залезать на высокие места(например, на людей).</p>
+            </section>
+          </article>
+
+          <article class="cats_info alley">
+            <div class="img_box">
+              <a href="http://www.omfgdogs.com/"><img src="cats/кот4.jpg" alt="cat4" class="img_cat"></a>
+            </div>
+            <div class="descr">
+              <p class="name"><a href="http://www.omfgdogs.com/">Соня</a></p>
+              <section class="short_descr">
+                <p>Возраст: 0 лет<br>Порода: нет<br>Болезни: нет</p>
+                <p class="status">Статус: видит сны</p>
+              </section>
+            </div>
+            <section class="full_descr">
+              <p>Наелся и спит.<br>Возраст 2 месяца.</p>
+            </section>
+          </article>
+
+          <article class="cats_info maine-coon">
+            <div class="img_box">
+              <a href="http://www.omfgdogs.com/"><img src="cats/кот5.jpg" alt="cat5" class="img_cat"></a>
+            </div>
+            <div class="descr">
+              <p class="name"><a href="http://www.omfgdogs.com/">Симба</a></p>
+              <section class="short_descr">
+                <p>Возраст: около 1 год<br>Порода: мейн-кун<br>Болезни: нет</p>
+                <p class="status">Статус: есть</p>
+              </section>
+            </div>
+            <section class="full_descr">
+              <p>Рыжий, веселый.<br>Возраст около 6 месяцев.<br>Любит смотреть мультфильмы.</p>
+            </section>
+          </article>
+
+          <article class="cats_info bengal">
+            <div class="img_box">
+              <a href="http://www.omfgdogs.com/"><img src="cats/кот6.jpg" alt="cat6" class="img_cat"></a>
+            </div>
+            <div class="descr">
+              <p class="name"><a href="http://www.omfgdogs.com/">Салем</a></p>
+              <section class="short_descr">
+                <p>Возраст: 10 лет<br>Порода: волшебный<br>Болезни: говорящий</p>
+                <p class="status">Статус: ищет Сабрину</p>
+              </section>
+            </div>
+            <section class="full_descr">
+              <p>Волшебный, говорящий.<br>В прошлом злой волшебник, а сейчас ворчливый кот.</p>
+            </section>
+          </article>
+
+          <article class="cats_info alley">
+            <div class="img_box">
+              <a href="http://www.omfgdogs.com/"><img src="cats/кот7.jpg" alt="cat7" class="img_cat"></a>
+            </div>
+            <div class="descr">
+              <p class="name"><a href="http://www.omfgdogs.com/">АкваКот</a></p>
+              <section class="short_descr">
+                <p>Возраст: 3 года<br>Порода: нет<br>Болезни: нет</p>
+                <p class="status">Статус: под водой</p>
+              </section>
+            </div>
+            <section class="full_descr">
+              <p>Самый чистый на районе.<br>Возраст 3 года.<br>Принимает водные процедуры два раза в день.</p>
+            </section>
+          </article>
+
+          <article class="cats_info alley">
+            <div class="img_box">
+              <a href="http://www.omfgdogs.com/"><img src="cats/кот8.jpg" alt="cat8" class="img_cat"></a>
+            </div>
+            <div class="descr">
+              <p class="name"><a href="http://www.omfgdogs.com/">Валера</a></p>
+              <section class="short_descr">
+                <p>Возраст: 6 лет<br>Порода: нет<br>Болезни: нет</p>
+                <p class="status">Статус: хочет кушать</p>
+              </section>
+            </div>
+            <section class="full_descr">
+              <p>Милый, когда сытый.<br>Возраст 6 лет.<br>Кусается и царапается, не подпускает к себе никого, кроме кормильца.</p>
+            </section>
+          </article>
+
+          <article class="cats_info alley">
+            <div class="img_box">
+              <a href="http://www.omfgdogs.com/"><img src="cats/кот9.jpg" alt="cat9" class="img_cat"></a>
+            </div>
+            <div class="descr">
+              <p class="name"><a href="http://www.omfgdogs.com/">Веган</a></p>
+              <section class="short_descr">
+                <p>Возраст: 2 года<br>Порода: нет<br>Болезни: нет</p>
+                <p class="status">Статус: поймал дзен</p>
+              </section>
+            </div>
+            <section class="full_descr">
+              <p>Любит овощи и медитацию.<br>Возраст 2 года.
+                Не ест мышей и не пьет молоко.<br>К людям и другим кошкам нейтрален, предпочитает гордое одиночество...</p>
+            </section>
+          </article>
+
+          <article class="cats_info alley">
+            <div class="img_box">
+              <a href="http://www.omfgdogs.com/"><img src="cats/кот10.jpg" alt="cat10" class="img_cat"></a>
+            </div>
+            <div class="descr">
+              <p class="name"><a href="http://www.omfgdogs.com/">Дачный</a></p>
+              <section class="short_descr">
+                <p>Возраст: 5 лет<br>Порода: нет<br>Болезни: нет</p>
+                <p class="status">Статус: на природе</p>
+              </section>
+            </div>
+            <section class="full_descr">
+              <p>Свободолюбивый, дружелюбный.<br>Возраст 5 лет.<br>Сбежал из городской квартиры на дачу и гоняется там за воробьями.</p>
+            </section>
+          </article>
+        </div>
+      </div>
+
+
+
+      <footer class="footer">
+        <div class="footer_elem emails">
+          Напишите нам:
+          <br>
+          <a class="email" href="https://cats.ru">  cats@babuli.ru</a>
+          <br class="dot">
+          <span class="dot">&#9679;</span>
+          <br class="dot">
+          <a class="email" href="https://cats.ru">  vnuchek@babuli.ru</a>
+        </div>
+        <div class="footer_elem footer_right">
+          &copy; 2018 ООО«<a href="https://cats.ru">Бабушкины котятки</a>»
+        </div>
+      </footer>
+  </body>
+</html>

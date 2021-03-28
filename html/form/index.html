@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>form</title>
+   <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="page">
+<form>
+      <div class="form__close">
+         <input type="radio" id="close_form" name="close-radio"/>
+         <label for="close_form"><img src="images/close.png" alt="cross"/></label>
+      </div>
+
+      <header class="head-form">
+         <h2 class="title">Прокачай свои кексы!</h2>
+         <p class="subtitle">Подпишись на нашу рассылку и получай новые рецепты кексов каждую неделю от наших лучших кондитеров!</p>
+      </header>
+   
+      <div class="wrapper">
+         <div class="info">
+            <div class="field-set">
+               <label for="txt-input">
+                  <input class="form-input" id="txt-input" type="text" placeholder="Имя" required>
+               </label>
+               <br>
+               <label for="email">
+                  <input class="form-input" type="email" placeholder="Почта" id="email"  name="email" required>  
+               </label> 
+               <br>
+               <label>
+                  <input class="form-input" type="number" placeholder="Количество членов семьи" min="1" max="10">
+               </label>
+            </div>
+         
+            <div class="radio-buttons">
+               <label class="custom-radio">
+                  <input type="radio" name="color">
+                  <span>Рецепты с пониженным содержанием сахара</span>
+                </label>
+                <label class="custom-radio">
+                  <input type="radio" name="color">
+                  <span>Неважно</span>
+                </label>
+            </div>
+         
+            <div class="input-checkbox">
+               <label for="spam" class="checkbox-container">
+                 <input type="checkbox" id="spam">
+                 <span class="checkmark"></span>
+                 Хочу кексы каждый день!
+               </label>
+             </div>
+         
+            <div class="submit-button-container">
+               <button class="submit_button">
+               <div class="submit_button_text">
+                 Подписаться
+               </div>
+               </button>
+            </div>
+
+         </div>
+      
+         <div class="image-container">
+            <img class="image" src="images/cupcake.png" alt="кекс">
+         </div>
+
+      </div> 
+</form>
+</body>
+</html>

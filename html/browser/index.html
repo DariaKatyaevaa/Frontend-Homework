@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Яндекс</title>
+    <link href="./index.css" rel="stylesheet">
+</head>
+
+<body class="page">
+    <input class="set" type="checkbox" id="trending">
+    <input class="set" type="checkbox" id="jokes">
+    <input class="set" type="checkbox" id="tv">
+    <input class="set" type="checkbox" id="auto">
+    <input class="set" type="checkbox" id="weather">
+    <input class="set" type="checkbox" id="traffic">
+    <input class="set" type="checkbox" id="map">
+    <input class="set" type="checkbox" id="afisha">
+    <input class="set" type="checkbox" id="showSettings">
+    <div class="settings">
+        <label for="trending">Посещаемое</label>
+        <label for="jokes">Анекдоты</label>
+        <label for="tv">Телепрограмма</label>
+        <label for="auto">Автомобильные новости</label>
+        <label for="weather">Погода</label>
+        <label for="traffic">Пробки</label>
+        <label for="map">Карта</label>
+        <label for="afisha">Афиша</label>
+    </div>
+
+    <div class="menu page__menu">
+        <span class="menu__city">Екатеринбург</span>
+        <div>
+            <label class="menu__settings" for="showSettings">Настройка</label>
+            <div class="menu__user-info">
+                <div class="menu__login">
+                    <strong>login</strong>
+                </div>
+                <div class="menu__email-info">Почта <strong>138</strong></div>
+            </div>
+        </div>
+    </div>
+    <main class="content page__content">
+        <section class="section content__section-news">
+            <header class="section__header section__header_align-baseline">
+                <a href="#" class="section__title">
+                    Сейчас в СМИ
+                </a>
+                <a href="#" class="section__city">
+                    в Екатеринбурге
+                </a>
+                <div class="section__date">
+                    16 декабря, среда 22:30
+                </div>
+            </header>
+            <ul class="section__list">
+                <li>Минобороны опровергло данные об окружении российских военных в Карабахе</li>
+                <li>Минсельхоз заявил о снижении цен на сахар и подсолнечное масло</li>
+                <li>Опубликовано видео первого полета новейшего Ил-114-300</li>
+                <li>Лавров назвал ущербными подходы Запада к обвинениям России из-за Навального</li>
+                <li>В Испании задержали 23 человека за отмывание денег «русской мафии»</li>
+            </ul>
+            <aside class="prices section__extra">
+                <div class="prices__price">
+                    <strong>USD ЦБ</strong> 73,50 <span class="price__change">+0,11</span>
+                </div>
+                <div class="prices__price">
+                    <strong>EUR ЦБ</strong> 89,45 <span class="price__change">+0,22</span>
+                </div>
+                <div class="prices__price">
+                    <strong>НЕФТЬ</strong> 50,89 <span class="price__change">+0,16%</span>
+                </div>
+            </aside>
+        </section>
+        <div class="content__column1">
+            <section class="section content__section-self-ads">
+                <header class="section__header">
+                    <a href="#" class="section__title">
+                        Посещаемое
+                    </a>
+                </header>
+                <ul class="section__list section__list_no-marker">
+                    <li><strong>Маркет</strong> — китайская рапродажа</li>
+                    <li><strong>Недвижимость</strong> — продажа студии</li>
+                    <li><strong>Авто.ру</strong> — Туссан третьей серии</li>
+                    <li><strong>Работа</strong> — охранником</li>
+                    <li><strong>Здоровье</strong> — врач на связи</li>
+                </ul>
+            </section>
+            <section class="section content__section-jokes">
+                <input class="jokes-radio-button joke-1-inp" id="joke-1" type="radio" name="joke" checked>
+                <input class="jokes-radio-button joke-2-inp" id="joke-2" type="radio" name="joke">
+                <input class="jokes-radio-button joke-3-inp" id="joke-3" type="radio" name="joke">
+                <input class="jokes-radio-button joke-4-inp" id="joke-4" type="radio" name="joke">
+                <input class="jokes-radio-button joke-5-inp" id="joke-5" type="radio" name="joke">
+
+                <header class="section__header">
+                    <a href="#" class="section__title">
+                        Лучшие анекдоты
+                    </a>
+                </header>
+                <div class="section__main jokes__text_hideable joke-1">
+                    Раздел: <a href="#">Медицинские</a><br />
+                    - Вас лечить хорошо или бесплатно?
+                </div>
+                <div class="section__main jokes__text_hideable joke-2">
+                    Раздел: <a href="#">Жизненные</a><br />
+                    Терпение и труд - инфаркт и инсульт.
+                </div>
+                <div class="section__main jokes__text_hideable joke-3">
+                    Раздел: <a href="#">Жизненные</a><br />
+                    Этот год был похож на удар мизинцем о ножку тумбочки.
+                </div>
+                <div class="section__main jokes__text_hideable joke-4">
+                    Раздел: <a href="#">Животные</a><br />
+                    - Интересно, когда кошке тоскливо, у нее на душе люди скребут?
+                </div>
+                <div class="section__main jokes__text_hideable joke-5">
+                    Раздел: <a href="#">Животные</a><br />
+                    - Как зовут вашего кота?<br>
+                    - Днем или в 5 утра?
+                </div>
+                <br>
+
+                <div class="jokes-labels">
+                    <label class="jokes-labels__label" for="joke-1">
+                      ↻ Показать ещё
+                    </label>
+                    <label class="jokes-labels__label" for="joke-2">
+                      ↻ Показать ещё
+                    </label>
+                    <label class="jokes-labels__label" for="joke-3">
+                      ↻ Показать ещё
+                    </label>
+                    <label class="jokes-labels__label" for="joke-4">
+                      ↻ Показать ещё
+                    </label>
+                    <label class="jokes-labels__label" for="joke-5">
+                      ↻ Показать ещё
+                    </label>
+                </div>
+            </section>
+        </div>
+        <div class="content__column2">
+            <section class="section content__section-tv-program">
+                <header class="section__header">
+                    <a href="#" class="section__title">
+                        Телепрограмма
+                    </a>
+                    <button class="section__button">ТВ онлайн</button>
+                </header>
+                <ul class="section__list  section__list_no-marker">
+                    <li>16:00 Понять и простить <span class="section__list-item-extra">41 Домашний</span></li>
+                    <li>16:30 Место встречи <span class="section__list-item-extra">НТВ</span></li>
+                    <li>16:30 Новости <span class="section__list-item-extra">РЕН ТВ</span></li>
+                    <li>16:30 Гадалка <span class="section__list-item-extra">ТВ-3</span></li>
+                    <li>16:30 Реальные пацаны <span class="section__list-item-extra">ТНТ</span></li>
+                </ul>
+            </section>
+            <section class="section content__section-auto-news">
+                <header class="section__header">
+                    <a href="#" class="section__title">
+                        Автомобильные новости
+                    </a>
+                </header>
+                <div class="section__scroll-list-container">
+                    <ul class="section__list  section__list_no-marker section__list_scrollable">
+                        <li>
+                            Правительство поддержало законопроект о регистрации машиномест
+                            <span class="section__list-item-extra">12:19</span>
+                        </li>
+                        <li>
+                            Обзор нового Mitsubishi, за которым выстроилась очередь
+                            <span class="section__list-item-extra">12:30</span>
+                        </li>
+                        <li>
+                            «Лады» оснастят системой управления со смартфона
+                            <span class="section__list-item-extra">12:40</span>
+                        </li>
+                        <li>
+                            В Китае представили спорткар с двигателем от Focus RS
+                            <span class="section__list-item-extra">12:50</span>
+                        </li>
+                        <li>
+                            Новый Skoda Rapid для России: первые фотографии, цены и дата начала продаж
+                            <span class="section__list-item-extra">13:50</span>
+                        </li>
+                        <li>
+                            Объявлена стоимость Skoda Karoq российской сборки
+                            <span class="section__list-item-extra">13:55</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <div class="content__column3">
+            <section class="section content__section-weather">
+                <header class="section__header">
+                    <a href="#" class="section__title">
+                        Погода
+                    </a>
+                    <img class="section__icon" src="icon/weather.svg" alt="" />
+                    <div class="section__title-extra">
+                        -3&deg;C
+                    </div>
+                </header>
+                <div class="section__main">
+                    Вечер -5, ночь -7
+                </div>
+            </section>
+            <section class="section content__section-traffic-jam">
+                <header class="section__header">
+                    <a href="#" class="section__title">
+                        Пробки
+                    </a>
+                    <img class="section__icon" src="icon/traffic.svg" alt="" />
+                    <div class="section__title-extra">4 балла</div>
+                </header>
+                <div class="section__main">
+                    Местами затруднения
+                </div>
+            </section>
+            <section class="section content__section-city-map">
+                <header class="section__header">
+                    <a href="#" class="section__title">
+                        Карта Екатеринбурга
+                    </a>
+                </header>
+                <div class="section__main">
+                    <strong>
+                        Такси Расписание<br />
+                        Междугородние автобусы
+                    </strong>
+                </div>
+            </section>
+            <section class="section content__section-events">
+                <header class="section__header">
+                    <a href="#" class="section__title">
+                        Афиша
+                    </a>
+                </header>
+                <ul class="section__list  section__list_no-marker">
+                    <li>Субурбикон <span class="section__list-item-extra">премьера в чт</span></li>
+                    <li>Последний богатырь <span class="section__list-item-extra">приключения</span></li>
+                    <li>
+                        Фиксики: Большой секрет <span class="section__list-item-extra">мультфильм</span>
+                    </li>
+                    <li>Тор: Рагнарёк <span class="section__list-item-extra">фэнтези</span></li>
+                    <li>Убийство в Восточном...<span class="section__list-item-extra">драма</span></li>
+                    <li><strong>Концерты — Brainstorm</strong></li>
+                </ul>
+            </section>
+        </div>
+
+        <section class="search-bar content__search-bar">
+            <nav class="search-bar__navigation">
+                <a href="#" class="search-bar__nav-item">Видео</a>
+                <a href="#" class="search-bar__nav-item">Картинки</a>
+                <a href="#" class="search-bar__nav-item">Новости</a>
+                <a href="#" class="search-bar__nav-item">Карты</a>
+                <a href="#" class="search-bar__nav-item">Маркет</a>
+                <a href="#" class="search-bar__nav-item">Переводчик</a>
+                <a href="#" class="search-bar__nav-item">Музыка</a>
+                <a href="#" class="search-bar__nav-item">еще</a>
+            </nav>
+            <div class="search-bar__search-line">
+                <label for="search">
+                    <input id="search" class="search-bar__edit-text" type="text" />
+                </label>
+                <img class="search-bar__icon" src="icon/micro.svg" alt="" />
+                <img class="search-bar__icon" src="icon/keyboard.svg" alt="" />
+                <button class="search-bar__button-find"><strong>Найти</strong></button>
+                <div class="search-bar__arrow"></div>
+            </div>
+            <aside class="search-bar__extra">
+                Найдется все. Например,
+                <span class="search-bar__extra_light">выхожу один я на дорогу</span>
+            </aside>
+        </section>
+        <section class="ad content__ad1">
+            <img class="ad__img ad__img_small" src="img/ad1.png" alt="" />
+            <a href="#" class="ad__title">Скачайте браузер</a>
+            <div class="ad__info">С защитой от злых духов</div>
+        </section>
+        <section class="ad content__ad2">
+            <img class="ad__img ad__img_big" src="img/ad2.PNG" alt="" />
+        </section>
+    </main>
+
+</body>
+
+</html>

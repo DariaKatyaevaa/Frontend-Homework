@@ -1,0 +1,365 @@
+.page {
+    padding: 0 10px 0 30px;
+    color: #000000;
+    font-family: 'YS Text', 'Helvetica Neue', Arial, sans-serif;
+    margin-left: 70px;
+}
+
+.page__content {
+    height: fit-content;
+    margin-left: 150px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.content {
+    display: grid;
+    grid-template-areas:
+        'news news ad1'
+        'search search search'
+        'ad2 ad2 ad2'
+        'col1 col2 col3';
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: repeat(4, fit-content(100%));
+}
+
+.content__search-bar {
+    grid-area: search;
+}
+
+.content__section-news {
+    grid-area: news;
+}
+
+.content__column1 {
+    grid-area: col1;
+}
+
+.content__column2 {
+    grid-area: col2;
+}
+
+.content__column3 {
+    grid-area: col3;
+}
+
+.content__ad1 {
+    grid-area: ad1;
+}
+
+.content__ad2 {
+    grid-area: ad2;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.menu__city {
+    color: rgba(0, 0, 0, 0.5);
+    vertical-align: center;
+}
+
+.menu__city::before {
+    content: url(./icon/arrow_up_right.svg);
+    vertical-align: center;
+}
+
+.menu__settings {
+    cursor: pointer;
+}
+
+.menu__user-info {
+    display: inline-block;
+
+    margin-left: 20px;
+    padding: 5px 60px 5px 5px;
+
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.3);
+    vertical-align: top;
+}
+
+.menu__login {
+    margin-bottom: 5px;
+}
+
+.menu__login::first-letter {
+    color: #ff0000;
+}
+
+.section {
+    display: block;
+
+    margin: 20px 20px 20px 0;
+}
+
+.section__header {
+    display: flex;
+    align-items: center;
+}
+
+.section__header_align-baseline {
+    align-items: baseline;
+}
+
+.section__header * {
+    margin-right: 10px;
+}
+
+.section__city {
+    color: rgba(4, 0, 220, 0.59);
+}
+
+.section__date {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 0.8em;
+}
+
+.section__list {
+    margin: 10px 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5rem;
+}
+
+.section__main {
+    margin: 10px 0;
+}
+
+.section__list_no-marker {
+    list-style-type: none;
+}
+
+.section__list-item-extra {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.section__button {
+    position: relative;
+    height: 30px;
+    padding-right: 20px;
+    border: none;
+    border-radius: 3px;
+    background-clip: padding-box;
+    background-color: #418af9;
+    background-image: linear-gradient(-225deg, #58c2ff 0%, #8080ff 100%);
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.section__button::after {
+    position: absolute;
+    top: 3px;
+    content: url('./icon/arrow_right.svg');
+}
+
+.section__list_scrollable {
+    overflow-y: scroll;
+    height: 160px;
+}
+
+.section__scroll-list-container {
+    position: relative;
+}
+
+.section__list_scrollable::before {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 1) 80%);
+    content: '';
+    pointer-events: none;
+}
+
+.section__list_scrollable::after {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(to top, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 0) 80%);
+    content: '';
+    pointer-events: none;
+}
+
+.section__title {
+    font-size: 1.3em;
+    vertical-align: center;
+}
+
+
+.search-bar__extra_light {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 0.8em;
+}
+
+.search-bar__nav-item {
+    margin-right: 10px;
+}
+
+.search-bar__search-line {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 24px;
+    margin: 5px 0;
+    border: #ffd534 solid 3px;
+}
+
+.search-bar__edit-text {
+    width: 700px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.search-bar__button-find {
+    width: 85px;
+    height: 102%;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    transform: translateX(20px);
+    background: #ffd534;
+    font-size: 16px;
+}
+
+.search-bar__arrow {
+    border-width: 15px 0 15px 15px;
+    border-style: solid;
+    border-color: transparent #ffd534;
+    transform: translateX(18px);
+
+    content: '';
+}
+
+.search-bar__search-line::before {
+    position: absolute;
+    left: 100px;
+    content: url('./icon/logo.svg');
+}
+
+.search-bar {
+    margin-bottom: 10px;
+}
+
+.prices {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price__change {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.ad__info {
+    font-size: 0.8rem;
+}
+
+.ad__img {
+    cursor: pointer;
+}
+
+.ad__img_big {
+    width: 800px;
+    height: 100px;
+}
+
+.ad__title {
+    line-height: 30px;
+}
+
+.set {
+    display: none;
+}
+
+.settings {
+    font: 14px Arial, sans-serif;
+    display: none;
+    position: absolute;
+    right: 12%;
+    top: 40px;
+    box-shadow: 0 0 2px #8d8d8d;
+    background: #fff;
+    padding: 10px;
+}
+
+
+.settings label {
+    display: block;
+    margin: 5px 20px 5px auto;
+}
+
+.settings label:before {
+    content: '';
+    display: inline-block;
+    background-image: url(img/check.png);
+    background-size: 16px;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+input[id='trending']:checked~.settings label[for='trending']:before,
+input[id='jokes']:checked~.settings label[for='jokes']:before,
+input[id='tv']:checked~.settings label[for='tv']:before,
+input[id='auto']:checked~.settings label[for='auto']:before,
+input[id='weather']:checked~.settings label[for='weather']:before,
+input[id='traffic']:checked~.settings label[for='traffic']:before,
+input[id='map']:checked~.settings label[for='map']:before,
+input[id='afisha']:checked~.settings label[for='afisha']:before {
+    background-image: url(img/chck1.png);
+}
+
+input[id='trending']:checked~.content .content__section-self-ads,
+input[id='jokes']:checked~.content .content__section-jokes,
+input[id='tv']:checked~.content .content__section-tv-program,
+input[id='auto']:checked~.content .content__section-auto-news,
+input[id='weather']:checked~.content .content__section-weather,
+input[id='traffic']:checked~.content .content__section-traffic-jam,
+input[id='map']:checked~.content .content__section-city-map,
+input[id='afisha']:checked~.content .content__section-events {
+    display: none;
+}
+
+input[id='showSettings']:checked~.settings {
+    display: block;
+}
+
+.jokes-labels__label {
+    display: none;
+    cursor: pointer;
+    color: rgb(80, 4, 151);
+}
+
+.jokes-radio-button {
+    display: none;
+}
+
+.jokes__text_hideable {
+    display: none;
+}
+
+.joke-1-inp:checked ~ .joke-1,
+.joke-2-inp:checked ~ .joke-2,
+.joke-3-inp:checked ~ .joke-3,
+.joke-4-inp:checked ~ .joke-4,
+.joke-5-inp:checked ~ .joke-5 {
+  display: block;
+}
+
+.joke-1-inp:checked ~ .jokes-labels .jokes-labels__label:nth-child(2),
+.joke-2-inp:checked ~ .jokes-labels .jokes-labels__label:nth-child(3),
+.joke-3-inp:checked ~ .jokes-labels .jokes-labels__label:nth-child(4),
+.joke-4-inp:checked ~ .jokes-labels .jokes-labels__label:nth-child(5),
+.joke-5-inp:checked ~ .jokes-labels .jokes-labels__label:nth-child(1) {
+  display: block;
+}

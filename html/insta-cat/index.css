@@ -1,0 +1,260 @@
+body {
+    width: 1024px;
+    height: 1024px;
+    margin: auto;
+}
+
+.main-window {
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.picture-box {
+    overflow: hidden;
+    width: 632px;
+    height: 632px;
+    max-height: 700px;
+    margin: auto;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.filters {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.arrow {
+    width: 10%;
+}
+
+.filter__show {
+    overflow: hidden;
+    width: 710px;
+}
+
+.filters__list {
+    display: flex;
+    flex-direction: row;
+    width: 300%;
+}
+
+ul {
+    width: 100%;
+}
+
+.filter__preview {
+    width: 170px;
+    height: 170px;
+    margin: 5px;
+}
+
+.filter__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.right_arrow,
+.left_arrow {
+    display: flex;
+    align-items: center;
+}
+
+.left_arrow__img {
+    transform: rotate(90deg);
+}
+
+.right_arrow__img {
+    transform: rotate(-90deg);
+    margin-left: 40px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 75%;
+    margin: auto;
+}
+
+.svg_sprite {
+    width: 0;
+    height: 0;
+}
+
+.menu__button {
+    cursor: pointer;
+    fill: #444444;
+}
+
+label {
+    cursor: pointer;
+}
+
+.menu__button:hover {
+    fill: gray;
+}
+
+svg {
+    width: 48px;
+    height: 48px;
+}
+
+.name {
+    color: gray;
+    font-family: Calibri, serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.bw-filter:checked~.main-window .img,
+.filter__bw{
+    filter: grayscale(1);
+}
+
+.sepia-filter:checked~.main-window .img,
+.filter__sepia  {
+    filter: sepia(1);
+}
+
+.blue-filter:checked~.main-window .img,
+.filter__blue {
+    filter: hue-rotate(180deg);
+}
+
+.pink-filter:checked~.main-window .img,
+.filter__pink {
+    filter: hue-rotate(270deg);
+}
+
+.green-filter:checked~.main-window .img,
+.filter__green {
+    filter: hue-rotate(90deg);
+}
+
+.l-arrow-s3,
+.r-arrow-s1 {
+    fill: darkgray;
+}
+
+.left_arrow__img,
+.right_arrow__img {
+    display: none;
+    cursor: pointer;
+    fill: gray;
+}
+
+.state1:checked~.filters .r-arrow-s2,
+.state2:checked~.filters .r-arrow-s3,
+.state3:checked~.filters .r-arrow-s1,
+.state1:checked~.filters .l-arrow-s3,
+.state2:checked~.filters .l-arrow-s1,
+.state3:checked~.filters .l-arrow-s2{
+    display: block;
+}
+
+.filters__list {
+    transition-duration: 1s;
+}
+
+.state2:checked~.filters .filters__list {
+    transform: translateX(-180px);
+}
+
+.state3:checked~.filters .filters__list {
+    transform: translateX(-360px);
+}
+
+.input_display_none,
+.button__size,
+.button__rotate{
+    display: none;
+}
+
+.img {
+    transition-duration: 1.5s;
+    transform: rotateY(0);
+}
+
+.picture {
+    overflow: hidden;
+    transition-duration: 1.5s;
+    transform: rotate(0deg);
+}
+
+.size1:checked~.menu .button__size2,
+.size2:checked~.menu .button__size3,
+.size3:checked~.menu .button__size1,
+.rotate0:checked~.menu .button__rotate90,
+.rotate90:checked~.menu .button__rotate180,
+.rotate180:checked~.menu .button__rotate270,
+.rotate270:checked~.menu .button__rotate0 
+{
+    display: block;
+}
+
+.rotate0:checked~.main-window .picture {
+    transition-duration: 1.5s;
+    transform: rotate(0deg);
+}
+
+.rotate90:checked~.main-window .picture {
+    transition-duration: 1.5s;
+    transform: rotate(90deg);
+}
+
+.rotate180:checked~.main-window .picture {
+    transition-duration: 1.5s;
+    transform: rotate(180deg);
+}
+
+.rotate270:checked~.main-window .picture {
+    transition-duration: 1.5s;
+    transform: rotate(270deg);
+}
+
+.size1:checked~.main-window .picture-box {
+    transition-duration: 1s;
+    transform: scale(1);
+}
+
+.size2:checked~.main-window .picture-box {
+    transition-duration: 1s;
+    transform: scale(1.2);
+}
+
+.size3:checked~.main-window .picture-box {
+    transition-duration: 1s;
+    transform: scale(0.8);
+}
+
+.flip:checked~.main-window .img {
+    transition-duration: 1.5s;
+    transform: rotateY(180deg);
+}
+
+.fill:checked~.main-window .img {
+    object-fit: cover;
+}
+
+.orig:checked~.main-window .img {
+    transform: none;
+    filter: none;
+    object-fit: contain;
+}
+
+.orig:checked~.main-window .picture-box,
+.orig:checked~.main-window .picture{
+    transform: none;
+}
+
+.orig:checked~.menu .button__orig {
+    box-shadow: 0 0 10px #aa3562;
+}
